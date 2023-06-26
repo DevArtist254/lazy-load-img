@@ -1,0 +1,41 @@
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+    /* grid img in 3 and center it */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cover {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.cover::before{
+    /* adding the blur plusing effect */
+    content: "";
+    position: absolute;
+    inset: 0;
+    animation: pluse 2.5s infinite;
+}
+
+@keyframes pluse {
+    0% {
+        background-color: rgba(255, 255, 255, 0);
+    }
+    50% {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    100% {
+       background-color: rgba(255, 255, 255, 0);
+    }
+}
+
+img {
+    /* size : 360px by 560px */
+    width: 360px;
+    height: 560px;
+}
